@@ -24,7 +24,7 @@ export const RegisterForm = ({ onSubmit }) => {
             <FormLabel htmlFor={emailId}>Електронна адреса:</FormLabel>
                 <FormInput id={emailId} value={email} name="email" type="email" onChange={handleChange} placeholder="Введіть електронну адресу" required />
             <FormLabel htmlFor={passwordId}>Пароль:</FormLabel>
-                <FormInput id={passwordId} value={password} name="password" type="password" onChange={handleChange} placeholder="Введіть пароль" required />
+                <FormInput id={passwordId} value={password} name="password" type="text" onChange={handleChange} placeholder="Введіть пароль" required />
             <SubmitBtn>Зареєструватись</SubmitBtn>
         </Form>
     )

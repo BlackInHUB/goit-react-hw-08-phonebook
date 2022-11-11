@@ -2,6 +2,8 @@ export const selectContacts = ({ contacts }) => contacts.items;
 
 export const selectIsLoading = ({ contacts }) => contacts.loading;
 
+export const selectContactsError = ({ contacts }) => contacts.error;
+
 export const selectFilteredContacts = ({ filter, contacts }) => {
   if (!filter.value) {
     return contacts.items;

@@ -2,6 +2,18 @@ import styled from 'styled-components';
 import { BsPlusSquare } from 'react-icons/bs';
 import { MdClose } from 'react-icons/md';
 
+export const Form = styled.form`
+  position: relative;
+  display: flex;
+  width: 500px;
+  padding: ${p => p.theme.space[4]}px;
+  flex-direction: column;
+  border: ${p => p.theme.borders.bold} ${p => p.theme.colors.primary};
+  box-shadow: 0px 10px 17px -3px ${p => p.theme.colors.grey};
+  border-radius: ${p => p.theme.radii.normal};
+  margin-bottom: ${p => p.theme.space[5]}px;
+`;
+
 export const OpenFormBtn = styled.button`
   display: flex;
   align-items: center;
@@ -19,18 +31,6 @@ export const OpenFormBtn = styled.button`
 export const OpenFormIcon = styled(BsPlusSquare)`
   fill: ${p => p.theme.colors.primary};
   margin-right: ${p => p.theme.space[3]}px;
-`;
-
-export const Form = styled.form`
-  position: relative;
-  display: flex;
-  width: 500px;
-  padding: ${p => p.theme.space[4]}px;
-  flex-direction: column;
-  border: ${p => p.theme.borders.bold} ${p => p.theme.colors.primary};
-  box-shadow: 0px 10px 17px -3px ${p => p.theme.colors.grey};
-  border-radius: ${p => p.theme.radii.normal};
-  margin-bottom: ${p => p.theme.space[5]}px;
 `;
 
 export const FormLabel = styled.label`

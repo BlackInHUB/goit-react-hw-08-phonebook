@@ -1,5 +1,5 @@
 import { lazy } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { Layout } from "./Layout";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
@@ -21,7 +21,7 @@ export const App = () => {
   useEffect(() => {
     const action = refreshing();
     dispatch(action);
-  })
+  }, [dispatch])
 
   return (
     <Box>
@@ -33,6 +33,7 @@ export const App = () => {
         <Route path="/register" element={<PublicRoute redirectTo="/contacts" component={<RegisterPage />} /> } />
         <Route path="/login" element={<PublicRoute redirectTo="/contacts" component={<LoginPage />} /> } />
         <Route path="/contacts" element={<PrivateRoute redirectTo="/login" component={<ContactsPage />} /> } />
+        <Route path="*" element={<Navigate to="/" />} />
       </Route>
     </Routes>
     </Box>

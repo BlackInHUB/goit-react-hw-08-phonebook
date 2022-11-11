@@ -5,7 +5,7 @@ import { addContact, deleteContact } from "redux/contacts/contactsOperations";
 import { Box } from "utils/Box";
 import { ContactsAddForm } from "./ContactAddForm/ContactsAddForm";
 import { ContactsList } from "./ContactsList/ContactsList";
-import { notifyWarning, notifySuccess } from "utils/notify";
+import { notifyWarning, notifySuccess, notifyDeletedInfo } from "utils/notify";
 
 export const Contacts = () => {
     const contacts = useSelector(selectFilteredContacts)
@@ -15,6 +15,9 @@ export const Contacts = () => {
     const onDelete = (id) => {
         const action = deleteContact(id);
         dispatch(action);
+
+        const deletedUser = contacts.find(contact => contact.id === id);
+        notifyDeletedInfo(deletedUser.name)
     }
 
     const handleSubmit = (newContact) => {

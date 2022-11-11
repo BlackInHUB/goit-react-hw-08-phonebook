@@ -5,3 +5,5 @@ export const selectLoading = ({ auth }) => auth.loading;
 export const selectUser = ({ auth }) => auth.user;
 
 export const selectIsRefreshing = ({ auth }) => auth.isRefreshing;
+
+export const selectAuthError = ({ auth }) => auth.error;

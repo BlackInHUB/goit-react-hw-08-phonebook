@@ -12,7 +12,8 @@ const LoginPage = () => {
     }
 
     return (
-        <Box>
+        <Box display="flex" alignItems="center" flexDirection="column">
+            <h1>Авторизуйтесь:</h1>
             <LoginForm onSubmit={onLogin}/>
         </Box>
     )

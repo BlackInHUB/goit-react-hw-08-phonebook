@@ -14,7 +14,7 @@ const ContactsPage = () => {
     }, [dispatch])
     
     return (
-        <Box>
+        <Box display="flex" justifyContent="center">
             <Contacts />
         </Box>
     )

@@ -6,7 +6,7 @@ import { ThreeCirclesLoader } from "./Loaders/ThreeCirclesLoader";
 
 export const Layout = () => {
     return (
-        <Box as="header" p={4}>
+        <Box>
             <Appbar />
             <Suspense fallback={<ThreeCirclesLoader />}>
                 <Outlet />

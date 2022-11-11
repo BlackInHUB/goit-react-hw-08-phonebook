@@ -1,16 +1,15 @@
-import { Box } from "utils/Box";
 import { AuthNav } from "./AuthNav";
 import { UserNav } from "./UserNav";
 import useAuth from "hooks/useAuth";
-import { NavMenuItem } from "./Appbar.styled";
+import { NavMenuItem, Header, LogoIcon } from "./Appbar.styled";
 
 export const Appbar = () => {
     const { isLogin } = useAuth();
 
     return (
-        <Box as="nav" display="flex" justifyContent="space-between" alignItems="center">
-            <NavMenuItem to="/">Logo</NavMenuItem>
+        <Header>
+            <NavMenuItem className="logo" to="/"><LogoIcon size="50" />Книга контактів</NavMenuItem>
             {isLogin ? <UserNav /> : <AuthNav />}
-        </Box>
+        </Header>
     )
 }

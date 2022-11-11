@@ -5,7 +5,7 @@ import { addContact, deleteContact } from "redux/contacts/contactsOperations";
 import { Box } from "utils/Box";
 import { ContactsAddForm } from "./ContactAddForm/ContactsAddForm";
 import { ContactsList } from "./ContactsList/ContactsList";
-import { notify } from "utils/notify";
+import { notifyWarning, notifySuccess } from "utils/notify";
 
 export const Contacts = () => {
     const contacts = useSelector(selectFilteredContacts)
@@ -20,16 +20,17 @@ export const Contacts = () => {
     const handleSubmit = (newContact) => {
         for (const contact of contacts) {
             if (contact.name === newContact.name) {
-                return notify(contact.name)
+                return notifyWarning(contact.name)
             }
         }
 
         const action = addContact(newContact);
         dispatch(action)
+        notifySuccess(newContact.name)
     }
 
     return (
-        <Box>
+        <Box width="500px" display="flex" flexDirection="column" alignItems="center">
             <ContactsAddForm onSubmit={handleSubmit} />
             <Filter />
             <ContactsList contacts={filteredContacts} onDelete={onDelete} />

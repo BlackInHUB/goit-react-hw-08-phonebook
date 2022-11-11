@@ -1,7 +1,7 @@
 import useForm from "hooks/useForm";
 import { nanoid } from "nanoid";
 import { useMemo } from "react";
-import { Form, FormLabel, FormInput, SubmitBtn } from "../RegisterForm/RegisterForm.styled";
+import { Form, FormLabel, FormInput, SubmitBtn } from "../LoginForm/LoginForm.styled";
 
 const initialState = {
     email: '',

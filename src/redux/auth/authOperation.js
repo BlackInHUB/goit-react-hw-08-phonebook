@@ -1,4 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { notifyError, notifyWarningAuth } from 'utils/notify';
 import * as api from '../../services/auth';
 
 export const signup = createAsyncThunk(
@@ -8,6 +9,7 @@ export const signup = createAsyncThunk(
       const result = await api.signup(signupData);
       return result;
     } catch ({ response }) {
+      notifyError();
       const error = {
         status: response.status,
         message: response.data.message,
@@ -24,6 +26,7 @@ export const login = createAsyncThunk(
       const result = await api.login(loginData);
       return result;
     } catch ({ response }) {
+      notifyError();
       const error = {
         status: response.status,
         message: response.data.message,
@@ -55,6 +58,7 @@ export const refreshing = createAsyncThunk(
       const result = await api.refreshing(auth.token);
       return result;
     } catch ({ response }) {
+      notifyWarningAuth();
       const error = {
         status: response.status,
         message: response.data.message,

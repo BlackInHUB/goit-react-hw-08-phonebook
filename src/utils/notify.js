@@ -47,3 +47,15 @@ export const notifyDeletedInfo = username =>
     progress: undefined,
     theme: 'colored',
   });
+
+export const notifyWarningAuth = () =>
+  toast.warning(`Увійдіть, або зареєструйтесь!`, {
+    position: 'top-center',
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: 'colored',
+  });

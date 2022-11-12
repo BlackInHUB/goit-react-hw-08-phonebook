@@ -1,15 +1,17 @@
 import { Filter } from "components/Filter/Filter";
 import { useDispatch, useSelector } from "react-redux";
-import { selectFilteredContacts } from "redux/contacts/contactsSelectors";
+import { selectFilteredContacts, selectIsLoading } from "redux/contacts/contactsSelectors";
 import { addContact, deleteContact } from "redux/contacts/contactsOperations";
 import { Box } from "utils/Box";
 import { ContactsAddForm } from "./ContactAddForm/ContactsAddForm";
 import { ContactsList } from "./ContactsList/ContactsList";
 import { notifyWarning, notifySuccess, notifyDeletedInfo } from "utils/notify";
+import { ThreeCirclesLoader } from "components/Loaders/ThreeCirclesLoader";
 
 export const Contacts = () => {
     const contacts = useSelector(selectFilteredContacts)
     const filteredContacts = useSelector(selectFilteredContacts);
+    const isLoadingContacts = useSelector(selectIsLoading)
     const dispatch = useDispatch();
     
     const onDelete = (id) => {
@@ -36,6 +38,7 @@ export const Contacts = () => {
         <Box width="500px" display="flex" flexDirection="column" alignItems="center">
             <ContactsAddForm onSubmit={handleSubmit} />
             <Filter />
+            {isLoadingContacts && <ThreeCirclesLoader />}
             <ContactsList contacts={filteredContacts} onDelete={onDelete} />
         </Box>
     )

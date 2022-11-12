@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import useForm from "hooks/useForm";
 import { nanoid } from "nanoid";
 import { useMemo } from "react";
@@ -28,4 +29,8 @@ export const RegisterForm = ({ onSubmit }) => {
             <SubmitBtn>Зареєструватись</SubmitBtn>
         </Form>
     )
+}
+
+RegisterForm.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
 }

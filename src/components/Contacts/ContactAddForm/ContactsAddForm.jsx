@@ -2,6 +2,7 @@ import useForm from "hooks/useForm";
 import { nanoid } from "nanoid";
 import { useMemo } from "react";
 import { Box } from "utils/Box";
+import PropTypes from 'prop-types'
 import { Form, FormInput, FormLabel, SubmitBtn, OpenFormBtn, OpenFormIcon, FormCloseBtn, FormCloseIcon } from "./ContactsAddForm.styled";
 
 const initialState = {
@@ -37,4 +38,8 @@ export const ContactsAddForm = ({ onSubmit }) => {
                 </Form>}
         </Box>
     )
+}
+
+ContactsAddForm.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
 }

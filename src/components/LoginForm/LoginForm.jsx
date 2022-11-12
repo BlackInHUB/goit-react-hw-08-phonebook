@@ -1,4 +1,5 @@
 import useForm from "hooks/useForm";
+import PropTypes from 'prop-types'
 import { nanoid } from "nanoid";
 import { useMemo } from "react";
 import { Form, FormLabel, FormInput, SubmitBtn } from "../LoginForm/LoginForm.styled";
@@ -24,4 +25,8 @@ export const LoginForm = ({onSubmit}) => {
             <SubmitBtn>Увійти</SubmitBtn>
         </Form>
     )
+}
+
+LoginForm.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
 }

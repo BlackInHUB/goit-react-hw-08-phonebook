@@ -13,7 +13,7 @@ const RegisterPage = () => {
 
     return (
         <Box display="flex" alignItems="center" flexDirection="column">
-            <h1>Зареєструйтесь:</h1>
+            <h1>Register:</h1>
             <RegisterForm onSubmit={handleSubmit} />
         </Box>
     )

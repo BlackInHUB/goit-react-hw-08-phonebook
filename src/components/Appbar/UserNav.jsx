@@ -16,12 +16,12 @@ export const UserNav = () => {
 
     return (
         <Box display="flex" width="55%" justifyContent="space-between">
-            <NavMenuItem className="contacts" to="/contacts"><ContactsIcon size="40"/><ContactsText>Мої контакти</ContactsText></NavMenuItem>
+            <NavMenuItem className="contacts" to="/contacts"><ContactsIcon size="40"/><ContactsText>My contacts</ContactsText></NavMenuItem>
             <Box display="flex" alignItems="center">
                 <Box >
-                    <User>Привіт, <FaUserAstronaut /> {user.name}!</User>
+                    <User>Hi, <FaUserAstronaut /> {user.name}!</User>
                 </Box>
-                <LogoutBtn onClick={onLogout}><LogoutText>Вихід</LogoutText><LogoutIcon size="30" /></LogoutBtn>
+                <LogoutBtn onClick={onLogout}><LogoutText>Log out</LogoutText><LogoutIcon size="30" /></LogoutBtn>
             </Box>
         </Box>
     )

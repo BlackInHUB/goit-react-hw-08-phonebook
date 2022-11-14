@@ -26,15 +26,15 @@ export const ContactsAddForm = ({ onSubmit }) => {
 
     return (
         <Box>
-            {!isFormOpen && <OpenFormBtn onClick={formOpenToggle}><OpenFormIcon size="30" />Додати контакт</OpenFormBtn>}
+            {!isFormOpen && <OpenFormBtn onClick={formOpenToggle}><OpenFormIcon size="30" />Add contact</OpenFormBtn>}
             {isFormOpen &&
                 <Form onSubmit={handleSubmit}>
                     <FormCloseBtn onClick={formOpenToggle}><FormCloseIcon size="25"/></FormCloseBtn>
-                    <FormLabel htmlFor={nameId}>Ім'я контакту:</FormLabel>
-                        <FormInput id={nameId} name="name" type="text" value={name} onChange={handleChange} placeholder="Введіть ім'я" required />
-                    <FormLabel htmlFor={numberId}>Номер телефону:</FormLabel>
-                        <FormInput id={numberId} name="number" type="text" value={number} onChange={handleChange} placeholder="Введіть номер" required />
-                    <SubmitBtn>Додати</SubmitBtn>
+                    <FormLabel htmlFor={nameId}>Name:</FormLabel>
+                        <FormInput id={nameId} name="name" type="text" value={name} onChange={handleChange} placeholder="Enter a name" required />
+                    <FormLabel htmlFor={numberId}>Number:</FormLabel>
+                        <FormInput id={numberId} name="number" type="text" value={number} onChange={handleChange} placeholder="Enter a number" required />
+                    <SubmitBtn>Add</SubmitBtn>
                 </Form>}
         </Box>
     )

@@ -8,7 +8,7 @@ export const Appbar = () => {
 
     return (
         <Header>
-            <NavMenuItem className="logo" to="/"><LogoIcon size="50" />Книга контактів</NavMenuItem>
+            <NavMenuItem className="logo" to="/"><LogoIcon size="50" />Phonebook</NavMenuItem>
             {isLogin ? <UserNav /> : <AuthNav />}
         </Header>
     )

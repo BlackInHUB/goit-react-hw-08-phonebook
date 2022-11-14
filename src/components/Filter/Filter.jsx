@@ -13,5 +13,5 @@ export const Filter = () => {
         dispatch(action)
 }
 
-    return <FilterInput type="text" value={filter} onChange={handleChange} placeholder="Кого шукаємо?" />
+    return <FilterInput type="text" value={filter} onChange={handleChange} placeholder="Filter?" />
 }

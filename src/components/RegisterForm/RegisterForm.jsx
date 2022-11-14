@@ -20,13 +20,13 @@ export const RegisterForm = ({ onSubmit }) => {
     
     return (
         <Form onSubmit={handleSubmit}>
-            <FormLabel htmlFor={nameId}>Ім'я:</FormLabel>
-                <FormInput id={nameId} value={name} name="name" type="text" onChange={handleChange} placeholder="Введіть ім'я" required/>
-            <FormLabel htmlFor={emailId}>Електронна адреса:</FormLabel>
-                <FormInput id={emailId} value={email} name="email" type="email" onChange={handleChange} placeholder="Введіть електронну адресу" required />
-            <FormLabel htmlFor={passwordId}>Пароль:</FormLabel>
-                <FormInput id={passwordId} value={password} name="password" type="text" onChange={handleChange} placeholder="Введіть пароль" required />
-            <SubmitBtn>Зареєструватись</SubmitBtn>
+            <FormLabel htmlFor={nameId}>Name:</FormLabel>
+                <FormInput id={nameId} value={name} name="name" type="text" onChange={handleChange} placeholder="Enter your name" required/>
+            <FormLabel htmlFor={emailId}>Email:</FormLabel>
+                <FormInput id={emailId} value={email} name="email" type="email" onChange={handleChange} placeholder="Enter your email" required />
+            <FormLabel htmlFor={passwordId}>Password:</FormLabel>
+                <FormInput id={passwordId} value={password} name="password" type="text" onChange={handleChange} placeholder="Enter your password" required />
+            <SubmitBtn>Register</SubmitBtn>
         </Form>
     )
 }

@@ -18,11 +18,11 @@ export const LoginForm = ({onSubmit}) => {
     
     return (
         <Form onSubmit={handleSubmit}>
-            <FormLabel htmlFor={emailId}>Електронна адреса:</FormLabel>
-                <FormInput id={emailId} value={email} name="email" type="email" onChange={handleChange} placeholder="Введіть електронну адресу" required />
-            <FormLabel htmlFor={passwordId}>Пароль:</FormLabel>
-                <FormInput id={passwordId} value={password} name="password" type="password" onChange={handleChange} placeholder="Введіть пароль" required />
-            <SubmitBtn>Увійти</SubmitBtn>
+            <FormLabel htmlFor={emailId}>Email:</FormLabel>
+                <FormInput id={emailId} value={email} name="email" type="email" onChange={handleChange} placeholder="Enter your email" required />
+            <FormLabel htmlFor={passwordId}>Password:</FormLabel>
+                <FormInput id={passwordId} value={password} name="password" type="password" onChange={handleChange} placeholder="Enter your password" required />
+            <SubmitBtn>Log in</SubmitBtn>
         </Form>
     )
 }

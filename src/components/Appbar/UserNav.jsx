@@ -15,7 +15,7 @@ export const UserNav = () => {
     }
 
     return (
-        <Box display="flex" width="55%" justifyContent="space-between">
+        <Box display="flex" width="90%" justifyContent="space-between">
             <NavMenuItem className="contacts" to="/contacts"><ContactsIcon size="40"/><ContactsText>My contacts</ContactsText></NavMenuItem>
             <Box display="flex" alignItems="center">
                 <Box >

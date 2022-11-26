@@ -1,7 +1,7 @@
 import { toast } from 'react-toastify';
 
 export const notifyWarning = username =>
-  toast.warning(`Контакт ${username} вже існує!`, {
+  toast.warning(`Contact ${username} allready exist!`, {
     position: 'top-center',
     autoClose: 3000,
     hideProgressBar: false,
@@ -13,7 +13,7 @@ export const notifyWarning = username =>
   });
 
 export const notifySuccess = username =>
-  toast.success(`${username} додано!`, {
+  toast.success(`${username} added!`, {
     position: 'top-center',
     autoClose: 3000,
     hideProgressBar: false,
@@ -25,7 +25,7 @@ export const notifySuccess = username =>
   });
 
 export const notifyError = () =>
-  toast.error('Щось пішло не так.. Спробуйте знову!', {
+  toast.error('Something goes wrong.. Try again!', {
     position: 'top-center',
     autoClose: 3000,
     hideProgressBar: false,
@@ -37,7 +37,7 @@ export const notifyError = () =>
   });
 
 export const notifyDeletedInfo = username =>
-  toast.info(`${username} видалено ☹`, {
+  toast.info(`${username} deleted ☹`, {
     position: 'top-center',
     autoClose: 3000,
     hideProgressBar: false,
@@ -49,7 +49,7 @@ export const notifyDeletedInfo = username =>
   });
 
 export const notifyWarningAuth = () =>
-  toast.warning(`Увійдіть, або зареєструйтесь!`, {
+  toast.warning(`Log in, or register!`, {
     position: 'top-center',
     autoClose: 3000,
     hideProgressBar: false,
